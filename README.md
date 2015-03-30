@@ -53,5 +53,20 @@ Another Simple Crawler
         
         
         将其配置为需要的参数，然后访问http://127.0.0.1/fetch/fetch启动爬取
+        
+        代理的配置在Fetch.java文件中：
+        protected int status;
+
+    protected boolean resumable = false;
+
+    protected RegexRule regexRule = new RegexRule();
+    protected ArrayList<String> seeds = new ArrayList<String>();
+    protected Fetch fetch;
+    
+    protected String proxyUrl="127.0.0.1";
+    protected int proxyPort=4444;
+    protected String proxyUsername="hkg";
+    protected String proxyPassword="dennis";
+    protected boolean proxyAuth=false;
 
 5.访问http://127.0.0.1/fetch/suspend可以停止爬取
